@@ -43,13 +43,19 @@ public:
 	// а что делать со столбцами, ума не приложу.
 	T* operator[] (int index)
 	{
-		if (index >= _row) throw std::runtime_error("operator[_row] ");
+		if (index >= _row && index < 0)
+		{
+			// здась я проверил выход за пределы массива по строкам
+			// а вот по столбцам, пожалуйста - хоть в космос! ))
+			throw std::runtime_error("operator[_row] ");
+		}
+		std::cout << "Индекса 2, а эта надпись - одна?!!!" << std::endl;
 		return _table[index];
 	}
 
 	T* operator[] (int index) const
 	{
-		if (index >= _row) throw std::runtime_error("operator[_row] ");
+		if (index >= _row && index < 0) throw std::runtime_error("operator[_row] ");
 		return _table[index];
 	}
 

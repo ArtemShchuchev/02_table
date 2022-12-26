@@ -17,10 +17,10 @@ int main()
 
 	try
 	{
-		//tab[0][0] = 5;
+		tab[0][0] = 5;
 		//tab[0][1] = 3;
 		//tab[0][2] = 9;
-
+		/*
 		for (int i = 0; i < ROW; ++i)
 		{
 			for (int j = 0; j < COL; ++j)
@@ -30,6 +30,7 @@ int main()
 			}
 			std::cout << std::endl;
 		}
+		*/
 	}
 	catch (std::runtime_error& err)
 	{
