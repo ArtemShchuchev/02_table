@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "Table.hpp"
 
 
@@ -17,10 +17,11 @@ int main()
 
 	try
 	{
-		tab[0][0] = 5;
+		//tab[0][0] = 5;
 		//tab[0][1] = 3;
 		//tab[0][2] = 9;
 		/*
+		*/
 		for (int i = 0; i < ROW; ++i)
 		{
 			for (int j = 0; j < COL; ++j)
@@ -30,7 +31,6 @@ int main()
 			}
 			std::cout << std::endl;
 		}
-		*/
 	}
 	catch (std::runtime_error& err)
 	{
@@ -46,8 +46,9 @@ int main()
 void printHeader()
 {
 	using namespace std;
-	setlocale(LC_ALL, "Russian");   // задаём русский текст
-	system("chcp 1251");            // настраиваем кодировку консоли
+	setlocale(LC_ALL, "ru_RU.UTF-8");	// задаем русский текст
+	//system("chcp UTF-8");				// настраиваем кодировку консоли
+	//system("chcp 1251");            // настраиваем кодировку консоли
 	std::system("cls");
 	cout << "Задача 2. Таблица\n"
 		 << "-----------------\n" << endl;
